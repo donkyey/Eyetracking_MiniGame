@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController autoresizesArchivedViewToFullSize="NO" id="BV1-FR-VrT" customClass="ViewController" customModule="Eyes_Tracking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="75x-hB-b3v">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="please" translatesAutoresizingMaskIntoConstraints="NO" id="mSa-9K-dK7">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1346"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qrs-KN-fCd">
+                                <rect key="frame" x="508" y="679" width="8" height="8"/>
+                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="Fxz-sB-x3B"/>
+                                    <constraint firstAttribute="width" constant="8" id="Sre-Mj-SYS"/>
+                                </constraints>
+                            </view>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W9c-Gg-veJ">
+                                <rect key="frame" x="816" y="1090" width="192" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="BOn-q2-1c9"/>
+                                    <constraint firstAttribute="width" constant="192" id="uLx-39-Rfm"/>
+                                </constraints>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9i0-fu-tQr" firstAttribute="trailing" secondItem="W9c-Gg-veJ" secondAttribute="trailing" constant="16" id="419-DO-d3g"/>
+                            <constraint firstItem="mSa-9K-dK7" firstAttribute="leading" secondItem="9i0-fu-tQr" secondAttribute="leading" id="43Q-BW-6Kw"/>
+                            <constraint firstItem="W9c-Gg-veJ" firstAttribute="bottom" secondItem="9i0-fu-tQr" secondAttribute="bottom" id="Leo-NT-fCl"/>
+                            <constraint firstItem="9i0-fu-tQr" firstAttribute="trailing" secondItem="mSa-9K-dK7" secondAttribute="trailing" id="VtE-CF-Rmf"/>
+                            <constraint firstItem="qrs-KN-fCd" firstAttribute="centerX" secondItem="75x-hB-b3v" secondAttribute="centerX" id="X8G-DC-nMf"/>
+                            <constraint firstItem="qrs-KN-fCd" firstAttribute="centerY" secondItem="75x-hB-b3v" secondAttribute="centerY" id="cfw-WL-4JV"/>
+                            <constraint firstAttribute="bottom" secondItem="mSa-9K-dK7" secondAttribute="bottom" constant="20" symbolic="YES" id="iwg-i9-ib3"/>
+                            <constraint firstItem="mSa-9K-dK7" firstAttribute="top" secondItem="9i0-fu-tQr" secondAttribute="top" id="zTi-hR-p1k"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9i0-fu-tQr"/>
+                    </view>
+                    <connections>
+                        <outlet property="eyePositionIndicatorCenterView" destination="qrs-KN-fCd" id="ZO2-jM-TBM"/>
+                        <outlet property="imageView" destination="mSa-9K-dK7" id="8BZ-p5-GQi"/>
+                        <outlet property="sceneView" destination="W9c-Gg-veJ" id="MwD-uf-Osc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.5234375" y="114.20204978038066"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="please" width="1033" height="1366"/>
+    </resources>
+</document>
